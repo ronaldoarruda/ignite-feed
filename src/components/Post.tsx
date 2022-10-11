@@ -14,7 +14,7 @@ interface Author {
 }
 
 interface Content {
-  type: 'paragraph' | 'link';
+  type: string;
   content: string;
 }
 
@@ -97,6 +97,9 @@ export function Post({ author, publishedAt, content }: PostProps) {
         })}
       </div>
 
+
+
+
       <form onSubmit={handleCreateNewComment} className={styles.commentForm}>
         <strong>Deixe seu feedback</strong>
 
@@ -115,6 +118,11 @@ export function Post({ author, publishedAt, content }: PostProps) {
           </button>
         </footer>
       </form>
+
+
+
+
+
       <div className='styles.commentList'>
         {comments.map(comment => {
           return (
